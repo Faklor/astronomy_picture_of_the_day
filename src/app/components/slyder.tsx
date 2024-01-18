@@ -2,8 +2,10 @@
 import React, { useEffect, useState } from 'react'
 import {
     getDataNow
-  } from './axios'
-
+} from './axios'
+import {
+    slyder
+} from './animate'
 export default function Slyder({date,validDay,validPeriod}:{date:string, validDay:boolean, validPeriod:boolean}){
     //hook
     const [images, setImages] = useState<Array<string>>([])
@@ -18,6 +20,8 @@ export default function Slyder({date,validDay,validPeriod}:{date:string, validDa
                 array.push(res.data.url)
 
                 setImages(array)
+
+                slyder()
             })
             .catch(e=>{
                 setError(true)
