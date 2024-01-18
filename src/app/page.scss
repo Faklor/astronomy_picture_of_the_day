@@ -1,3 +1,51 @@
+@import "@fontsource/khula";
+
 main{
+    font-family: "Khula";
+    text-align: center;
+    h1{
+        background-color: #fff;
+    }
+    h2{
+        color: rgba(0, 0, 0, 0.25);
+        //display: none;
+    }
+    h3{
+        color: #EE88A3;
+    }
+    input{
+        //color: rgba(0, 0, 0, 0.25);
+        border:none;
+        text-align: center;
+        outline: none;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 1em 1.5em;
+        border-radius: 10px;
+        transition: 0.5s;
+        margin-bottom: 1em;
+        box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
+        &:focus{
+            background-color: #000;
+            color: #fff;
+        }
+        
+    }
+    .slyder{
+        overflow: hidden;
+        overflow-x: auto;
+        display: flex;
+        margin: 0 auto;width: 50em;
+        
+        border-radius: 10px;
+        box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
+
+        img{
+            width: 50em;
+            height: 30em;
+            object-fit: cover;
     
+        }
+    }
 }
+

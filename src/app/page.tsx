@@ -16,7 +16,7 @@ export default function Home() {
     <main>
     
       <h1>Astronomy Picture of the Day</h1>
-      <h2>Enter the date(format:YYYY-MM-DD) or period <br/>of dates(format: start date/end date) in the panel below. </h2>
+      <h2>Click on panel and enter the date(format:YYYY-MM-DD) <br/> or period of dates(format: start date/end date) in the panel below. </h2>
       <div className='filter'>
           <input defaultValue={defaultData} onChange={e=>setDefaultDate(e.target.value)}/>
           {validDay || validPeriod?<></>:<h3>wrong format, correct day:YYYY-MM-DD of period:YYYY-MM-DD/YYYY-MM-DD</h3>}

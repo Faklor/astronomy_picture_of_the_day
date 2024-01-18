@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/khula": "^5.0.8",
     "animejs": "^3.2.2",
     "axios": "^1.6.5",
     "moment": "^2.30.1",
