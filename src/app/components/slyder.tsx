@@ -7,15 +7,22 @@ import {
 import {
     slyder
 } from './animate'
+
+
 export default function Slyder({date,validDay,validPeriod}:{date:string, validDay:boolean, validPeriod:boolean}){
     //hook
     const [images, setImages] = useState<Array<string>>([])
     const [error, setError] = useState<boolean>(false)
+
+    
     //load
     useEffect(()=>{
         if(validDay){
             getDataNow('date='+date)
             .then(res=>{
+                 
+                //console.log(res.config.onDownloadProgress())
+                
                 let array:any[] = []
 
                 array.push(res.data.url)
@@ -49,9 +56,12 @@ export default function Slyder({date,validDay,validPeriod}:{date:string, validDa
     
     
     return(
+        
+        
         <div className="slyder">
             
             {error?<h3>Incorrect data:check if the date or range is entered correctly</h3>:<></>}
+            
             {images.map((img,index)=>{
                 return <Image src={img} key={index}  alt={``} width={500} height={500}/>
             })}
