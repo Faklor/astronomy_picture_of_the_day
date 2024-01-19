@@ -51,7 +51,6 @@ export default function Slyder({date,validDay,validPeriod}:{date:string, validDa
     return(
         <div className="slyder">
             
-            
             {error?<h3>Incorrect data:check if the date or range is entered correctly</h3>:<></>}
             {images.map((img,index)=>{
                 return <Image src={img} key={index}  alt={``} width={500} height={500}/>
